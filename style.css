@@ -1,0 +1,289 @@
+:root {
+  --bg: #62637422;
+}
+
+body {
+  font-size: 15pt;
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  box-sizing: border-box;
+  position: absolute;
+  overflow-y: scroll;
+}
+
+#openMenu {
+  display: none;
+}
+
+#close {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+}
+
+#openMenu:checked~.nav-links {
+  z-index: 2;
+  transform: scale(1);
+}
+
+.nav-links {
+  position: fixed;
+  top: 0px;
+  background: rgba(0, 0, 0, .8);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  transform: scale(0);
+  transition: all .5s;
+}
+
+.nav-links ul {
+  width: 90%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+.nav-links ul li {
+  width: 70%;
+  height: 50px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  border-bottom: 0.5px solid #ccc;
+}
+
+
+h1 {
+  color: #333;
+  font-family: monospace
+}
+
+.header {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  background: #f2f2f2;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+
+#skills {
+  padding: 5px;
+}
+
+#skills #cont {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+#skills #cont div {
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--bg);
+}
+
+
+#skills #cont div:hover {
+  background: #aaa;
+}
+
+
+.header label {
+  position: absolute;
+  right: 30px;
+  
+}
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  font-weight: 500;
+}
+
+#about {
+  padding: 5px;
+  background: #dde0e3;
+  margin-top: 10px;
+}
+
+#about p,
+section p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 30px;
+}
+
+#home {
+  margin-top: 60px;
+}
+
+#home div img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #333;
+}
+
+#home div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#projects {
+  width: 100%;
+  padding: 5px;
+}
+
+#projects div {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 6px;
+  background: var(--bg);
+  border-radius: 5px;
+  margin: 10px auto;
+  transition: all .5s;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+}
+
+#projects div:hover {
+  transform: scale(1.05);
+}
+
+#projects div img {
+  height: 390px;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#contact {
+  padding: 5px;
+  background: #dde0e3;
+}
+
+#contact form {
+  width: 80%;
+  margin: 0 auto;
+  background: #dde0e3;
+  padding: 5px;
+}
+
+#contact form div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+#contact form div label {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+#contact form div input {
+  padding: 10px;
+  width: 90%;
+  outline: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 17px;
+  border: 1px solid #333;
+  background: #dde0e3;
+  border-radius: 4px;
+}
+
+#contact form div #msg {
+  height: 50px;
+}
+
+#contact form button {
+  padding: 10px;
+  outline: none;
+  border: none;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ccc;
+  background: #333;
+  margin-top: 10px;
+  border-radius: 3px;
+}
+
+footer {
+  padding: 5px;
+  height: 30px;
+  width: 100%;
+  background: rgba(0, 0, 0, .1);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #333;
+}
+
+#notice {
+  padding: 5px;
+  margin-top: 10px
+}
+
+#notice span {
+  text-transform: uppercase;
+  color: crimson;
+}
+
+@media (min-width: 655px) {
+  #projects div {
+    height: 200px;
+    width: 200px;
+    object-fit: cover
+  }
+  
+  #projects {
+    display: flex;
+    gap: 10px;
+  }
+  
+  footer {
+    position: fixed;
+    bottom: 0px;
+  }
+  
+  #contact {
+    margin-top: 500px;
+  }
+}
